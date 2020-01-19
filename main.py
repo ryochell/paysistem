@@ -181,13 +181,21 @@ def message_text(event):
                 layout='vertical',
                 spacing='sm',
                 contents=[
+                    # callAction, separator, websiteAction
+                    SpacerComponent(size='sm'),
+                    # callAction
+                    ButtonComponent(
+                        style='link',
+                        height='sm',
+                        action=URIAction(label='CALL', uri='tel:000000'),
+                    ),
                     # separator
                     SeparatorComponent(),
                     # websiteAction
                     ButtonComponent(
                         style='link',
                         height='sm',
-                        action=URIAction(label='予約する', uri="https://example.com")
+                        action=URIAction(label='WEBSITE', uri="https://example.com")
                     )
                 ]
             ),
