@@ -104,7 +104,7 @@ def message_text(event):
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='http://example.com',
+                url='https://example.com/cafe.jpg',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
@@ -114,7 +114,7 @@ def message_text(event):
                 layout='vertical',
                 contents=[
                     # title
-                    TextComponent(text='', weight='bold', size='xl'),
+                    TextComponent(text='Brown Cafe', weight='bold', size='xl'),
                     # review
                     BoxComponent(
                         layout='baseline',
