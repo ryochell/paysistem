@@ -195,8 +195,7 @@ def message_text(event):
                         style='link',
                         height='sm',
                         action=URIAction(label='WEBSITE', uri="https://example.com")
-                    ),
-                    PostbackAction(label='ping', data='ping')
+                    )
                 ]
             ),
         )
