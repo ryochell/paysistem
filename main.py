@@ -666,6 +666,15 @@ def message_text(event):
                         QuickReplyButton(
                             action=LocationAction(label="label7")
                         ),
+                        QuickReplyButton(
+                            action=LocationAction(label="label8")
+                        ),
+                        QuickReplyButton(
+                            action=LocationAction(label="label9")
+                        ),
+                        QuickReplyButton(
+                            action=LocationAction(label="label10")
+                        ),
                     ])))
     else:
         line_bot_api.reply_message(
