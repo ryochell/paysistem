@@ -106,7 +106,7 @@ def message_text(event):
             hero=ImageComponent(
                 url='https://c-plst.gnst.jp/img/st/genre/002_genrelink_japanese.jpg?t=1557813942',
                 size='full',
-                aspect_ratio='20:13',
+                aspect_ratio='39:13',
                 aspect_mode='cover',
                 action=URIAction(uri='http://example.com', label='label')
             ),
@@ -114,7 +114,7 @@ def message_text(event):
                 layout='vertical',
                 contents=[
                     # title
-                    TextComponent(text='Brown Cafe', weight='bold', size='5xl'),
+                    TextComponent(text='Brown Cafe', weight='bold', size='xl'),
                     # review
                     BoxComponent(
                         layout='baseline',
