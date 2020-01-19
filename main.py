@@ -114,7 +114,7 @@ def message_text(event):
                 layout='vertical',
                 contents=[
                     # title
-                    TextComponent(text='Brown Cafe', weight='bold', size='xl'),
+                    TextComponent(text='Brown Cafe', weight='bold', size='xxs'),
                     # review
                     BoxComponent(
                         layout='baseline',
