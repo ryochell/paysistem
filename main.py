@@ -539,88 +539,34 @@ def message_text(event):
             messages = [TextSendMessage(text='available: false')]
         line_bot_api.reply_message(event.reply_token, messages)
     elif text == '24':
-        carousel_template = CarouselTemplate(
-        {
-            "type": "template",
-            "altText": "this is a carousel template",
-            "template": {
-                "type": "carousel",
-                "actions": [],
-                "columns": [
-                {
-                    "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
-                    "title": "ご飯",
-                    "text": "定食",
-                    "actions": [
-                    {
-                        "type": "message",
-                        "label": "焼肉",
-                        "text": "やきにく"
-                    },
-                    {
-                        "type": "message",
-                        "label": "生姜焼き",
-                        "text": "しょうがやき"
-                    },
-                    {
-                        "type": "message",
-                        "label": "野菜炒め",
-                        "text": "やさいいため"
-                    }
-                    ]
-                },
-                {
-                    "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
-                    "title": "タイトル",
-                    "text": "テキスト",
-                    "actions": [
-                    {
-                        "type": "message",
-                        "label": "アクション 1",
-                        "text": "アクション 1"
-                    },
-                    {
-                        "type": "message",
-                        "label": "アクション 2",
-                        "text": "アクション 2"
-                    },
-                    {
-                        "type": "message",
-                        "label": "アクション 3",
-                        "text": "アクション 3"
-                    }
-                    ]
-                },
-                {
-                    "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
-                    "title": "タイトル",
-                    "text": "テキスト",
-                    "actions": [
-                    {
-                        "type": "message",
-                        "label": "アクション 1",
-                        "text": "アクション 1"
-                    },
-                    {
-                        "type": "message",
-                        "label": "アクション 2",
-                        "text": "アクション 2"
-                    },
-                    {
-                        "type": "message",
-                        "label": "アクション 3",
-                        "text": "アクション 3"
-                    }
-                    ]
-                }
-                ]
-            }
-        }
-        )
+        carousel_template = CarouselTemplate(columns=[
+            CarouselColumn(text='hoge1', title='fuga1', actions=[
+                URIAction(label='Go to line.me', uri='https://line.me'),
+                PostbackAction(label='ping', data='ping')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                PostbackAction(label='ping with text', data='ping', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+        ])
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == '25':
+        image_carousel_template = ImageCarouselTemplate(columns=[
+            ImageCarouselColumn(image_url='https://via.placeholder.com/1024x1024',
+                                action=DatetimePickerAction(label='datetime',
+                                                            data='datetime_postback',
+                                                            mode='datetime')),
+            ImageCarouselColumn(image_url='https://via.placeholder.com/1024x1024',
+                                action=DatetimePickerAction(label='date',
+                                                            data='date_postback',
+                                                            mode='date'))
+        ])
+        template_message = TemplateSendMessage(
+            alt_text='ImageCarousel alt text', template=image_carousel_template)
+        line_bot_api.reply_message(event.reply_token, template_message)     
+    elif text == '26':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
