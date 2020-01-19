@@ -190,6 +190,16 @@ def message_text(event):
                         style='link',
                         height='sm',
                         action=URIAction(label='WEBSITE', uri="https://example.com")
+                    ),
+                    ButtonComponent(
+                        style='link',
+                        height='sm',
+                        action=URIAction(label='WEBSITE', uri="https://example.com")
+                    ),
+                    ButtonComponent(
+                        style='link',
+                        height='sm',
+                        action=URIAction(label='WEBSITE', uri="https://example.com")
                     )
                 ]
             ),
