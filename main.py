@@ -540,6 +540,10 @@ def message_text(event):
         line_bot_api.reply_message(event.reply_token, messages)
     elif text == '24':
         carousel_template = CarouselTemplate(columns=[
+            ImageCarouselColumn(image_url='https://via.placeholder.com/1024x1024',
+                                action=DatetimePickerAction(label='datetime',
+                                                            data='datetime_postback',
+                                                            mode='datetime')),
             CarouselColumn(text='hoge1', title='fuga1', actions=[
                 URIAction(label='Go to line.me', uri='https://line.me'),
                 PostbackAction(label='ping', data='ping')
