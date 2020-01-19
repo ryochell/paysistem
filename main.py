@@ -100,11 +100,11 @@ def message_text(event):
 
     if text == '1':
         content = 'おはようございます'
-    elif text == '2':
+    elif text == '予約':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='https://uds.gnst.jp/rest/img/h2nfs1710000/s_0n68.jpg?t=1577348786',
+                url='https://c-plst.gnst.jp/img/st/genre/002_genrelink_japanese.jpg?t=1557813942',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
