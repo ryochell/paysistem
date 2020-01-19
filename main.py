@@ -99,7 +99,10 @@ def message_text(event):
     text = event.message.text
 
     if text == '1':
-        content = 'おはようございます'
+        content = {  
+            "type":"camera",
+            "label":"Camera"
+        }
     elif text == '2':
         content = 'こんばんわ'
     elif text == '3':
