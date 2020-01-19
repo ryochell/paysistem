@@ -539,7 +539,7 @@ def message_text(event):
             messages = [TextSendMessage(text='available: false')]
         line_bot_api.reply_message(event.reply_token, messages)
     elif text == '24':
-        carousel_template = CarouselTemplate(columns=[
+        carousel_template = CarouselTemplate(
         {
             "type": "template",
             "altText": "this is a carousel template",
@@ -616,7 +616,7 @@ def message_text(event):
                 ]
             }
         }
-        ])
+        )
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
