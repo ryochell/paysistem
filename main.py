@@ -636,6 +636,37 @@ def message_text(event):
             event.reply_token,
             message
         )
+    elif text == '27':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(
+                text='Quick reply',
+                quick_reply=QuickReply(
+                    items=[
+                        QuickReplyButton(
+                            action=PostbackAction(label="label1", data="data1")
+                        ),
+                        QuickReplyButton(
+                            action=MessageAction(label="label2", text="text2")
+                        ),
+                        QuickReplyButton(
+                            action=DatetimePickerAction(label="label3",
+                                                        data="data3",
+                                                        mode="date")
+                        ),
+                        QuickReplyButton(
+                            action=CameraAction(label="label4")
+                        ),
+                        QuickReplyButton(
+                            action=CameraRollAction(label="label5")
+                        ),
+                        QuickReplyButton(
+                            action=LocationAction(label="label6")
+                        ),
+                        QuickReplyButton(
+                            action=LocationAction(label="label7")
+                        ),
+                    ])))
     else:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.message.text))
