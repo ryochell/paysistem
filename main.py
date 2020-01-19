@@ -104,7 +104,7 @@ def message_text(event):
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='https://line-objects-dev.com/flex/bg/eiji-k-1360395-unsplash.jpg',
+                url='http://example.com',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
