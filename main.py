@@ -542,7 +542,6 @@ def message_text(event):
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='hoge1', title='fuga1', actions=[
                 MessageAction(label='Translate Rice', text='米'),
-                MessageAction(label='Translate Rice', text='米'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
             CarouselColumn(text='hoge2', title='fuga2', actions=[
