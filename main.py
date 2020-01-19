@@ -100,7 +100,7 @@ def message_text(event):
 
     if text == '1':
         content = 'おはようございます'
-    elif text == '予約':
+    elif text == '2':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
