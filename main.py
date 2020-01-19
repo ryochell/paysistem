@@ -183,12 +183,6 @@ def message_text(event):
                 contents=[
                     # callAction, separator, websiteAction
                     SpacerComponent(size='sm'),
-                    # callAction
-                    ButtonComponent(
-                        style='link',
-                        height='sm',
-                        action=URIAction(label='CALL', uri='tel:000000'),
-                    ),
                     # separator
                     SeparatorComponent(),
                     # websiteAction
