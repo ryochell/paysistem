@@ -541,9 +541,9 @@ def message_text(event):
     elif text == '24':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='hoge1', title='fuga1', actions=[
-                PostbackAction(label='ping', data='ping'),
-                PostbackAction(label='ping', data='ping'),
-                PostbackAction(label='ping', data='ping')
+                MessageAction(label='Translate Rice', text='米'),
+                MessageAction(label='Translate Rice', text='米'),
+                MessageAction(label='Translate Rice', text='米')
             ]),
             CarouselColumn(text='hoge2', title='fuga2', actions=[
                 PostbackAction(label='ping with text', data='ping', text='ping'),
